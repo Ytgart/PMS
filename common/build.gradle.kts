@@ -20,6 +20,12 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
+                implementation("org.json:json:20220924")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+                implementation("org.apache.commons:commons-lang3:3.12.0")
+                implementation("io.ktor:ktor-client-core:2.1.3")
+                implementation("com.beust:klaxon:5.5")
+                implementation("org.gagravarr:vorbis-java-core:0.8")
             }
         }
         val commonTest by getting {
@@ -41,6 +47,7 @@ kotlin {
         val desktopMain by getting {
             dependencies {
                 api(compose.preview)
+                implementation("io.ktor:ktor-client-apache:2.1.3")
             }
         }
         val desktopTest by getting
